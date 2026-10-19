@@ -1,0 +1,12 @@
+{
+  "full_attempts": 1,
+  "concurrent_full_builds": 1,
+  "full_seconds": 3600,
+  "operation_seconds": 900,
+  "query_seconds": 30,
+  "workspace_bytes": 51539607552,
+  "database_bytes": 21474836480,
+  "command_output_bytes": 16777216,
+  "fixture_database_bytes": 33554432,
+  "preflight_seconds": 900
+}

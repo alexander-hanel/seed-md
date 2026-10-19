@@ -1,0 +1,48 @@
+{
+  "source": "samples/scoped.cpp",
+  "corpus": "classic",
+  "path": "scoped.cpp",
+  "kind": "call",
+  "cases": [
+    {
+      "line": 2,
+      "name": "Probe",
+      "qualified_name": "Left::Probe",
+      "targets": [
+        "Left::Probe"
+      ]
+    },
+    {
+      "line": 3,
+      "name": "Read",
+      "qualified_name": "ReceiverA::Read",
+      "targets": [
+        "ReceiverA::Read"
+      ]
+    },
+    {
+      "line": 7,
+      "name": "Shadowed",
+      "targets": [],
+      "shadowed": true
+    },
+    {
+      "line": 9,
+      "name": "Read",
+      "targets": [
+        "ISeedDevice::Read",
+        "ReceiverA::Read",
+        "ReceiverB::Read"
+      ],
+      "status": "ambiguous"
+    },
+    {
+      "line": 10,
+      "name": "Probe",
+      "targets": [
+        "Left::Probe",
+        "Right::Probe"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "acquisition": [
+    {
+      "id": "SRC-SDK-DOCS",
+      "kind": "git",
+      "url": "https://github.com/MicrosoftDocs/sdk-api.git",
+      "ref": "default",
+      "destination": "inputs/sdk-api"
+    },
+    {
+      "id": "SRC-DDI-DOCS",
+      "kind": "git",
+      "url": "https://github.com/MicrosoftDocs/windows-driver-docs-ddi.git",
+      "ref": "default",
+      "destination": "inputs/ddi"
+    },
+    {
+      "id": "SRC-SDK-HEADERS",
+      "kind": "nuget",
+      "package": "Microsoft.Windows.SDK.CPP",
+      "version": "10.0.28000.2705",
+      "destination": "inputs/sdk-headers"
+    },
+    {
+      "id": "SRC-WDK-HEADERS",
+      "kind": "nuget",
+      "package": "Microsoft.Windows.WDK.x64",
+      "version": "10.0.28000.2526",
+      "destination": "inputs/wdk-headers"
+    },
+    {
+      "id": "SRC-SAMPLES",
+      "kind": "git",
+      "url": "https://github.com/microsoft/Windows-classic-samples.git",
+      "ref": "default",
+      "destination": "inputs/samples"
+    },
+    {
+      "id": "SRC-PROTOCOLS",
+      "kind": "git",
+      "url": "https://github.com/awakecoding/openspecs.git",
+      "ref": "default",
+      "destination": "inputs/openspecs"
+    }
+  ],
+  "docs": [
+    {
+      "key": "sdk",
+      "path": "inputs/sdk-api/sdk-api-src/content",
+      "repository": "inputs/sdk-api",
+      "published_url_base": "https://learn.microsoft.com/windows/win32/api/"
+    },
+    {
+      "key": "ddi",
+      "path": "inputs/ddi/wdk-ddi-src/content",
+      "repository": "inputs/ddi",
+      "published_url_base": "https://learn.microsoft.com/windows-hardware/drivers/ddi/"
+    },
+    {
+      "key": "protocols",
+      "path": "inputs/openspecs/skills/windows-protocols",
+      "repository": "inputs/openspecs",
+      "format": "specification",
+      "include_assets": true
+    }
+  ],
+  "headers": [
+    {
+      "key": "sdk-10.0.28000.2705",
+      "path": "inputs/sdk-headers/extracted/c/Include/10.0.28000.0",
+      "package": "Microsoft.Windows.SDK.CPP",
+      "version": "10.0.28000.2705",
+      "include_version": "10.0.28000.0",
+      "manifest": "inputs/sdk-headers/complete-manifest.json",
+      "inventory": "inputs/sdk-headers/headers-complete.json",
+      "inventory_root": "inputs/sdk-headers/extracted"
+    },
+    {
+      "key": "sdk-10.0.28000.2705-ucrt-source",
+      "path": "inputs/sdk-headers/extracted/c/Source/10.0.28000.0/ucrt",
+      "package": "Microsoft.Windows.SDK.CPP",
+      "version": "10.0.28000.2705",
+      "include_version": "10.0.28000.0",
+      "manifest": "inputs/sdk-headers/complete-manifest.json",
+      "inventory": "inputs/sdk-headers/headers-complete.json",
+      "inventory_root": "inputs/sdk-headers/extracted"
+    },
+    {
+      "key": "wdk-10.0.28000.2526",
+      "path": "inputs/wdk-headers/extracted/c/Include",
+      "package": "Microsoft.Windows.WDK.x64",
+      "version": "10.0.28000.2526",
+      "include_version": "10.0.28000.0",
+      "manifest": "inputs/wdk-headers/complete-manifest.json",
+      "inventory": "inputs/wdk-headers/headers-complete.json",
+      "inventory_root": "inputs/wdk-headers/extracted"
+    }
+  ],
+  "samples": [
+    {
+      "key": "classic",
+      "path": "inputs/samples",
+      "repository": "inputs/samples"
+    }
+  ]
+}

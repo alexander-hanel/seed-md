@@ -1,0 +1,59 @@
+{
+  "documents": [
+    {
+      "source_path": "sdk/group/nf-seed-seedcopy.md",
+      "fields": {
+        "uid": "NF:seed.SeedCopy",
+        "title": "SeedCopy function",
+        "primary_name": "SeedCopy",
+        "header": "api.h",
+        "include_header": null,
+        "technology": null,
+        "library": null,
+        "source_date": null
+      }
+    },
+    {
+      "source_path": "protocols/[MS-SEED].md",
+      "fields": {
+        "title": "[MS-SEED]: Invented protocol",
+        "kind": "specification"
+      }
+    },
+    {
+      "source_path": "sdk/group/nf-seed-seedtexta.md",
+      "fields": {
+        "primary_name": "SeedTextA"
+      }
+    },
+    {
+      "source_path": "sdk/group/nf-seed-seedtextw.md",
+      "fields": {
+        "primary_name": "SeedTextW"
+      }
+    }
+  ],
+  "members": [
+    {
+      "source_path": "sdk/group/nf-seed-seedcopy.md",
+      "name": "value",
+      "fields": {
+        "kind": "parameter",
+        "direction": "in",
+        "optional": null,
+        "declared_type": "int",
+        "value_text": null,
+        "position": 1
+      }
+    },
+    {
+      "source_path": "sdk/group/nf-seed-read.md",
+      "name": "value",
+      "fields": {
+        "direction": "out",
+        "optional": 1,
+        "declared_type": "int*"
+      }
+    }
+  ]
+}

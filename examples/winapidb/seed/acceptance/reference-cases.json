@@ -1,0 +1,689 @@
+{
+  "description": "Source-backed compatibility examples. Document bytes are retained exactly; header declarations are exact verified source slices with retained copyright comments. Expected values were checked against the source, not blindly copied from generated output.",
+  "identity_policy": "Reference IDs and absolute local paths are excluded. Full runs need not match historical Git commits. A changed source contract must be reported, not silently exempted.",
+  "cases": [
+    {
+      "name": "CreateFileA",
+      "document": {
+        "full_source_path": "sdk/fileapi/nf-fileapi-createfilea.md",
+        "fixture_source_path": "reference-sdk/fileapi/nf-fileapi-createfilea.md",
+        "fixture_input": "reference-sdk/content/fileapi/nf-fileapi-createfilea.md",
+        "source_id": "SRC-SDK-DOCS",
+        "source_path": "fileapi/nf-fileapi-createfilea.md",
+        "source_sha256": "517767cf5c9d4f775125648c393c77933d330240c91db785229437131e85c5e1",
+        "revision": "a4fd3f7efe2e3378a96c6fe5a6a9455eba9fa021",
+        "expected_sources": {
+          "uid": "UID",
+          "title": "title",
+          "header": "req.header",
+          "dll": "req.dll",
+          "library": "req.lib",
+          "primary_name": "UID symbol selecting an explicit api_name"
+        },
+        "expected": {
+          "uid": "NF:fileapi.CreateFileA",
+          "title": "CreateFileA function (fileapi.h)",
+          "header": "fileapi.h",
+          "dll": "Kernel32.dll",
+          "library": "Kernel32.lib",
+          "primary_name": "CreateFileA"
+        },
+        "parameters": [
+          {
+            "name": "lpFileName",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 1,
+            "source_heading": "-param lpFileName [in]"
+          },
+          {
+            "name": "dwDesiredAccess",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 2,
+            "source_heading": "-param dwDesiredAccess [in]"
+          },
+          {
+            "name": "dwShareMode",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 3,
+            "source_heading": "-param dwShareMode [in]"
+          },
+          {
+            "name": "lpSecurityAttributes",
+            "direction": "in",
+            "optional": 1,
+            "declared_type": null,
+            "position": 4,
+            "source_heading": "-param lpSecurityAttributes [in, optional]"
+          },
+          {
+            "name": "dwCreationDisposition",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 5,
+            "source_heading": "-param dwCreationDisposition [in]"
+          },
+          {
+            "name": "dwFlagsAndAttributes",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 6,
+            "source_heading": "-param dwFlagsAndAttributes [in]"
+          },
+          {
+            "name": "hTemplateFile",
+            "direction": "in",
+            "optional": 1,
+            "declared_type": null,
+            "position": 7,
+            "source_heading": "-param hTemplateFile [in, optional]"
+          }
+        ]
+      },
+      "declaration": {
+        "source_id": "SRC-SDK-HEADERS",
+        "source_path": "um/fileapi.h",
+        "source_sha256": "f8927178c75de487c0e57f044a215e455522bf6eaa0b660421be09cd06ae05a1",
+        "full_corpus": "sdk-10.0.28000.2705",
+        "source_span": {
+          "byte_start": 2166,
+          "byte_end": 2475,
+          "line_start": 77,
+          "line_end": 88
+        },
+        "fixture_corpus": "reference-sdk-headers",
+        "fixture_input": "reference-sdk-headers/include/CreateFileA.h",
+        "fixture_path": "CreateFileA.h",
+        "signature": "WINBASEAPI\r\nHANDLE\r\nWINAPI\r\nCreateFileA(\r\n    _In_ LPCSTR lpFileName,\r\n    _In_ DWORD dwDesiredAccess,\r\n    _In_ DWORD dwShareMode,\r\n    _In_opt_ LPSECURITY_ATTRIBUTES lpSecurityAttributes,\r\n    _In_ DWORD dwCreationDisposition,\r\n    _In_ DWORD dwFlagsAndAttributes,\r\n    _In_opt_ HANDLE hTemplateFile\r\n    );",
+        "fixture_sha256": "d7fa9e410cb334095a66ac7adff4ca4626636de5769cec8d9eef430d23a11613",
+        "name": "CreateFileA",
+        "kind": "function"
+      }
+    },
+    {
+      "name": "CreateFileW",
+      "document": {
+        "full_source_path": "sdk/fileapi/nf-fileapi-createfilew.md",
+        "fixture_source_path": "reference-sdk/fileapi/nf-fileapi-createfilew.md",
+        "fixture_input": "reference-sdk/content/fileapi/nf-fileapi-createfilew.md",
+        "source_id": "SRC-SDK-DOCS",
+        "source_path": "fileapi/nf-fileapi-createfilew.md",
+        "source_sha256": "acc5fa80b621e4444a2364399d731b4812a630866d1c714f916a7f2b0be04782",
+        "revision": "a4fd3f7efe2e3378a96c6fe5a6a9455eba9fa021",
+        "expected_sources": {
+          "uid": "UID",
+          "title": "title",
+          "header": "req.header",
+          "dll": "req.dll",
+          "library": "req.lib",
+          "primary_name": "UID symbol selecting an explicit api_name"
+        },
+        "expected": {
+          "uid": "NF:fileapi.CreateFileW",
+          "title": "CreateFileW function (fileapi.h)",
+          "header": "fileapi.h",
+          "dll": "Kernel32.dll",
+          "library": "Kernel32.lib",
+          "primary_name": "CreateFileW"
+        },
+        "parameters": [
+          {
+            "name": "lpFileName",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 1,
+            "source_heading": "-param lpFileName [in]"
+          },
+          {
+            "name": "dwDesiredAccess",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 2,
+            "source_heading": "-param dwDesiredAccess [in]"
+          },
+          {
+            "name": "dwShareMode",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 3,
+            "source_heading": "-param dwShareMode [in]"
+          },
+          {
+            "name": "lpSecurityAttributes",
+            "direction": "in",
+            "optional": 1,
+            "declared_type": null,
+            "position": 4,
+            "source_heading": "-param lpSecurityAttributes [in, optional]"
+          },
+          {
+            "name": "dwCreationDisposition",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 5,
+            "source_heading": "-param dwCreationDisposition [in]"
+          },
+          {
+            "name": "dwFlagsAndAttributes",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 6,
+            "source_heading": "-param dwFlagsAndAttributes [in]"
+          },
+          {
+            "name": "hTemplateFile",
+            "direction": "in",
+            "optional": 1,
+            "declared_type": null,
+            "position": 7,
+            "source_heading": "-param hTemplateFile [in, optional]"
+          }
+        ]
+      },
+      "declaration": {
+        "source_id": "SRC-SDK-HEADERS",
+        "source_path": "um/fileapi.h",
+        "source_sha256": "f8927178c75de487c0e57f044a215e455522bf6eaa0b660421be09cd06ae05a1",
+        "full_corpus": "sdk-10.0.28000.2705",
+        "source_span": {
+          "byte_start": 2479,
+          "byte_end": 2789,
+          "line_start": 90,
+          "line_end": 101
+        },
+        "fixture_corpus": "reference-sdk-headers",
+        "fixture_input": "reference-sdk-headers/include/CreateFileW.h",
+        "fixture_path": "CreateFileW.h",
+        "signature": "WINBASEAPI\r\nHANDLE\r\nWINAPI\r\nCreateFileW(\r\n    _In_ LPCWSTR lpFileName,\r\n    _In_ DWORD dwDesiredAccess,\r\n    _In_ DWORD dwShareMode,\r\n    _In_opt_ LPSECURITY_ATTRIBUTES lpSecurityAttributes,\r\n    _In_ DWORD dwCreationDisposition,\r\n    _In_ DWORD dwFlagsAndAttributes,\r\n    _In_opt_ HANDLE hTemplateFile\r\n    );",
+        "fixture_sha256": "106c5358fa5837a3e79d30e5f05411654738ac30d9301e39c46a4a41bd795a71",
+        "name": "CreateFileW",
+        "kind": "function"
+      }
+    },
+    {
+      "name": "ReadFile",
+      "document": {
+        "full_source_path": "sdk/fileapi/nf-fileapi-readfile.md",
+        "fixture_source_path": "reference-sdk/fileapi/nf-fileapi-readfile.md",
+        "fixture_input": "reference-sdk/content/fileapi/nf-fileapi-readfile.md",
+        "source_id": "SRC-SDK-DOCS",
+        "source_path": "fileapi/nf-fileapi-readfile.md",
+        "source_sha256": "8ab682f3e83ac4a17a0e7c8ad678772e6426e78e67117fc7e8ac890f95a2d687",
+        "revision": "a4fd3f7efe2e3378a96c6fe5a6a9455eba9fa021",
+        "expected_sources": {
+          "uid": "UID",
+          "title": "title",
+          "header": "req.header",
+          "dll": "req.dll",
+          "library": "req.lib",
+          "primary_name": "UID symbol selecting an explicit api_name"
+        },
+        "expected": {
+          "uid": "NF:fileapi.ReadFile",
+          "title": "ReadFile function (fileapi.h)",
+          "header": "fileapi.h",
+          "dll": "Kernel32.dll",
+          "library": "Kernel32.lib",
+          "primary_name": "ReadFile"
+        },
+        "parameters": [
+          {
+            "name": "hFile",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 1,
+            "source_heading": "-param hFile [in]"
+          },
+          {
+            "name": "lpBuffer",
+            "direction": "out",
+            "optional": null,
+            "declared_type": null,
+            "position": 2,
+            "source_heading": "-param lpBuffer [out]"
+          },
+          {
+            "name": "nNumberOfBytesToRead",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 3,
+            "source_heading": "-param nNumberOfBytesToRead [in]"
+          },
+          {
+            "name": "lpNumberOfBytesRead",
+            "direction": "out",
+            "optional": 1,
+            "declared_type": null,
+            "position": 4,
+            "source_heading": "-param lpNumberOfBytesRead [out, optional]"
+          },
+          {
+            "name": "lpOverlapped",
+            "direction": "in,out",
+            "optional": 1,
+            "declared_type": null,
+            "position": 5,
+            "source_heading": "-param lpOverlapped [in, out, optional]"
+          }
+        ]
+      },
+      "declaration": {
+        "source_id": "SRC-SDK-HEADERS",
+        "source_path": "um/fileapi.h",
+        "source_sha256": "f8927178c75de487c0e57f044a215e455522bf6eaa0b660421be09cd06ae05a1",
+        "full_corpus": "sdk-10.0.28000.2705",
+        "source_span": {
+          "byte_start": 25429,
+          "byte_end": 25760,
+          "line_start": 989,
+          "line_end": 999
+        },
+        "fixture_corpus": "reference-sdk-headers",
+        "fixture_input": "reference-sdk-headers/include/ReadFile.h",
+        "fixture_path": "ReadFile.h",
+        "signature": "WINBASEAPI\r\n_Must_inspect_result_\r\nBOOL\r\nWINAPI\r\nReadFile(\r\n    _In_ HANDLE hFile,\r\n    _Out_writes_bytes_to_opt_(nNumberOfBytesToRead, *lpNumberOfBytesRead) __out_data_source(FILE) LPVOID lpBuffer,\r\n    _In_ DWORD nNumberOfBytesToRead,\r\n    _Out_opt_ LPDWORD lpNumberOfBytesRead,\r\n    _Inout_opt_ LPOVERLAPPED lpOverlapped\r\n    );",
+        "fixture_sha256": "0810f5af4a81a23326332cc2dd1746d3a42d1d5b2da294f12a83a269d8169b23",
+        "name": "ReadFile",
+        "kind": "function"
+      }
+    },
+    {
+      "name": "ReadFileEx",
+      "document": {
+        "full_source_path": "sdk/fileapi/nf-fileapi-readfileex.md",
+        "fixture_source_path": "reference-sdk/fileapi/nf-fileapi-readfileex.md",
+        "fixture_input": "reference-sdk/content/fileapi/nf-fileapi-readfileex.md",
+        "source_id": "SRC-SDK-DOCS",
+        "source_path": "fileapi/nf-fileapi-readfileex.md",
+        "source_sha256": "d89771d74898be74cc239404651f62f0c407df5597f31b69bb57f4c8d9d680db",
+        "revision": "a4fd3f7efe2e3378a96c6fe5a6a9455eba9fa021",
+        "expected_sources": {
+          "uid": "UID",
+          "title": "title",
+          "header": "req.header",
+          "dll": "req.dll",
+          "library": "req.lib",
+          "primary_name": "UID symbol selecting an explicit api_name"
+        },
+        "expected": {
+          "uid": "NF:fileapi.ReadFileEx",
+          "title": "ReadFileEx function (fileapi.h)",
+          "header": "fileapi.h",
+          "dll": "Kernel32.dll",
+          "library": "Kernel32.lib",
+          "primary_name": "ReadFileEx"
+        },
+        "parameters": [
+          {
+            "name": "hFile",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 1,
+            "source_heading": "-param hFile [in]"
+          },
+          {
+            "name": "lpBuffer",
+            "direction": "out",
+            "optional": 1,
+            "declared_type": null,
+            "position": 2,
+            "source_heading": "-param lpBuffer [out, optional]"
+          },
+          {
+            "name": "nNumberOfBytesToRead",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 3,
+            "source_heading": "-param nNumberOfBytesToRead [in]"
+          },
+          {
+            "name": "lpOverlapped",
+            "direction": "in,out",
+            "optional": null,
+            "declared_type": null,
+            "position": 4,
+            "source_heading": "-param lpOverlapped [in, out]"
+          },
+          {
+            "name": "lpCompletionRoutine",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 5,
+            "source_heading": "-param lpCompletionRoutine [in]"
+          }
+        ]
+      },
+      "declaration": {
+        "source_id": "SRC-SDK-HEADERS",
+        "source_path": "um/fileapi.h",
+        "source_sha256": "f8927178c75de487c0e57f044a215e455522bf6eaa0b660421be09cd06ae05a1",
+        "full_corpus": "sdk-10.0.28000.2705",
+        "source_span": {
+          "byte_start": 25764,
+          "byte_end": 26087,
+          "line_start": 1001,
+          "line_end": 1011
+        },
+        "fixture_corpus": "reference-sdk-headers",
+        "fixture_input": "reference-sdk-headers/include/ReadFileEx.h",
+        "fixture_path": "ReadFileEx.h",
+        "signature": "WINBASEAPI\r\n_Must_inspect_result_\r\nBOOL\r\nWINAPI\r\nReadFileEx(\r\n    _In_ HANDLE hFile,\r\n    _Out_writes_bytes_opt_(nNumberOfBytesToRead) __out_data_source(FILE) LPVOID lpBuffer,\r\n    _In_ DWORD nNumberOfBytesToRead,\r\n    _Inout_ LPOVERLAPPED lpOverlapped,\r\n    _In_ LPOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine\r\n    );",
+        "fixture_sha256": "b4f2e1744ad2d8a3787db8f56b8881f9ff19b661946ddf874f666391cb011066",
+        "name": "ReadFileEx",
+        "kind": "function"
+      }
+    },
+    {
+      "name": "DeviceIoControl",
+      "document": {
+        "full_source_path": "sdk/ioapiset/nf-ioapiset-deviceiocontrol.md",
+        "fixture_source_path": "reference-sdk/ioapiset/nf-ioapiset-deviceiocontrol.md",
+        "fixture_input": "reference-sdk/content/ioapiset/nf-ioapiset-deviceiocontrol.md",
+        "source_id": "SRC-SDK-DOCS",
+        "source_path": "ioapiset/nf-ioapiset-deviceiocontrol.md",
+        "source_sha256": "c2fea15e31bdb35f84049ed9c42859ec77f87feda46dc92133da5172afb5b60f",
+        "revision": "a4fd3f7efe2e3378a96c6fe5a6a9455eba9fa021",
+        "expected_sources": {
+          "uid": "UID",
+          "title": "title",
+          "header": "req.header",
+          "dll": "req.dll",
+          "library": "req.lib",
+          "primary_name": "UID symbol selecting an explicit api_name"
+        },
+        "expected": {
+          "uid": "NF:ioapiset.DeviceIoControl",
+          "title": "DeviceIoControl function (ioapiset.h)",
+          "header": "ioapiset.h",
+          "dll": "Kernel32.dll",
+          "library": "Kernel32.lib",
+          "primary_name": "DeviceIoControl"
+        },
+        "parameters": [
+          {
+            "name": "hDevice",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 1,
+            "source_heading": "-param hDevice [in]"
+          },
+          {
+            "name": "dwIoControlCode",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 2,
+            "source_heading": "-param dwIoControlCode [in]"
+          },
+          {
+            "name": "lpInBuffer",
+            "direction": "in",
+            "optional": 1,
+            "declared_type": null,
+            "position": 3,
+            "source_heading": "-param lpInBuffer [in, optional]"
+          },
+          {
+            "name": "nInBufferSize",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 4,
+            "source_heading": "-param nInBufferSize [in]"
+          },
+          {
+            "name": "lpOutBuffer",
+            "direction": "out",
+            "optional": 1,
+            "declared_type": null,
+            "position": 5,
+            "source_heading": "-param lpOutBuffer [out, optional]"
+          },
+          {
+            "name": "nOutBufferSize",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 6,
+            "source_heading": "-param nOutBufferSize [in]"
+          },
+          {
+            "name": "lpBytesReturned",
+            "direction": "out",
+            "optional": 1,
+            "declared_type": null,
+            "position": 7,
+            "source_heading": "-param lpBytesReturned [out, optional]"
+          },
+          {
+            "name": "lpOverlapped",
+            "direction": "in,out",
+            "optional": 1,
+            "declared_type": null,
+            "position": 8,
+            "source_heading": "-param lpOverlapped [in, out, optional]"
+          }
+        ]
+      },
+      "declaration": {
+        "source_id": "SRC-SDK-HEADERS",
+        "source_path": "um/ioapiset.h",
+        "source_sha256": "7c3f659f98b3f1748a314bd64106583d01649333e0419b66232b4f64b3f85b0c",
+        "full_corpus": "sdk-10.0.28000.2705",
+        "source_span": {
+          "byte_start": 2437,
+          "byte_end": 2836,
+          "line_start": 82,
+          "line_end": 94
+        },
+        "fixture_corpus": "reference-sdk-headers",
+        "fixture_input": "reference-sdk-headers/include/DeviceIoControl.h",
+        "fixture_path": "DeviceIoControl.h",
+        "signature": "WINBASEAPI\r\nBOOL\r\nWINAPI\r\nDeviceIoControl(\r\n    _In_ HANDLE hDevice,\r\n    _In_ DWORD dwIoControlCode,\r\n    _In_reads_bytes_opt_(nInBufferSize) LPVOID lpInBuffer,\r\n    _In_ DWORD nInBufferSize,\r\n    _Out_writes_bytes_to_opt_(nOutBufferSize,*lpBytesReturned) LPVOID lpOutBuffer,\r\n    _In_ DWORD nOutBufferSize,\r\n    _Out_opt_ LPDWORD lpBytesReturned,\r\n    _Inout_opt_ LPOVERLAPPED lpOverlapped\r\n    );",
+        "fixture_sha256": "61a7b49691861d41935de6dfbfe4a05e4a19f4faf834ac6b69d2547de221e93a",
+        "name": "DeviceIoControl",
+        "kind": "function"
+      }
+    },
+    {
+      "name": "IoCreateDevice",
+      "document": {
+        "full_source_path": "ddi/wdm/nf-wdm-iocreatedevice.md",
+        "fixture_source_path": "reference-ddi/wdm/nf-wdm-iocreatedevice.md",
+        "fixture_input": "reference-ddi/content/wdm/nf-wdm-iocreatedevice.md",
+        "source_id": "SRC-DDI-DOCS",
+        "source_path": "wdm/nf-wdm-iocreatedevice.md",
+        "source_sha256": "029c9b768e815ae33d23d9ce327f5148b50eef6b9163f0836f88649a8ef44e60",
+        "revision": "7515063cea4c9e98db6a92986c5b4ddb0463fd16",
+        "expected_sources": {
+          "uid": "UID",
+          "title": "title",
+          "header": "req.header",
+          "dll": "req.dll",
+          "library": "req.lib",
+          "primary_name": "UID symbol selecting an explicit api_name"
+        },
+        "expected": {
+          "uid": "NF:wdm.IoCreateDevice",
+          "title": "IoCreateDevice function (wdm.h)",
+          "header": "wdm.h",
+          "dll": "NtosKrnl.exe",
+          "library": "NtosKrnl.lib",
+          "primary_name": "IoCreateDevice"
+        },
+        "parameters": [
+          {
+            "name": "DriverObject",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 1,
+            "source_heading": "-param DriverObject [in]"
+          },
+          {
+            "name": "DeviceExtensionSize",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 2,
+            "source_heading": "-param DeviceExtensionSize [in]"
+          },
+          {
+            "name": "DeviceName",
+            "direction": "in",
+            "optional": 1,
+            "declared_type": null,
+            "position": 3,
+            "source_heading": "-param DeviceName [in, optional]"
+          },
+          {
+            "name": "DeviceType",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 4,
+            "source_heading": "-param DeviceType [in]"
+          },
+          {
+            "name": "DeviceCharacteristics",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 5,
+            "source_heading": "-param DeviceCharacteristics [in]"
+          },
+          {
+            "name": "Exclusive",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 6,
+            "source_heading": "-param Exclusive [in]"
+          },
+          {
+            "name": "DeviceObject",
+            "direction": "out",
+            "optional": null,
+            "declared_type": null,
+            "position": 7,
+            "source_heading": "-param DeviceObject [out]"
+          }
+        ]
+      },
+      "declaration": {
+        "source_id": "SRC-WDK-HEADERS",
+        "source_path": "10.0.28000.0/km/wdm.h",
+        "source_sha256": "10369c2437f08eea9e197e5d858244625bc1605cae0fdcd49e5a026c63b00d4b",
+        "full_corpus": "wdk-10.0.28000.2526",
+        "source_span": {
+          "byte_start": 976993,
+          "byte_end": 977595,
+          "line_start": 35628,
+          "line_end": 35646
+        },
+        "fixture_corpus": "reference-wdk-headers",
+        "fixture_input": "reference-wdk-headers/include/IoCreateDevice.h",
+        "fixture_path": "IoCreateDevice.h",
+        "signature": "_IRQL_requires_max_(APC_LEVEL)\r\n_Ret_range_(<=, 0)\r\nNTKERNELAPI\r\nNTSTATUS\r\nIoCreateDevice(\r\n    _In_  PDRIVER_OBJECT DriverObject,\r\n    _In_  ULONG DeviceExtensionSize,\r\n    _In_opt_ PUNICODE_STRING DeviceName,\r\n    _In_  DEVICE_TYPE DeviceType,\r\n    _In_  ULONG DeviceCharacteristics,\r\n    _In_  BOOLEAN Exclusive,\r\n    _Outptr_result_nullonfailure_\r\n    _At_(*DeviceObject,\r\n        __drv_allocatesMem(Mem)\r\n        _When_((((_In_function_class_(DRIVER_INITIALIZE))\r\n               ||(_In_function_class_(DRIVER_DISPATCH)))),\r\n             __drv_aliasesMem))\r\n    PDEVICE_OBJECT *DeviceObject\r\n    );",
+        "fixture_sha256": "72196d2efb00b884e6ef41a0fe7b75244aefd26fb88644c9b667ab5148ed109d",
+        "name": "IoCreateDevice",
+        "kind": "function"
+      }
+    },
+    {
+      "name": "IoDeleteDevice",
+      "document": {
+        "full_source_path": "ddi/wdm/nf-wdm-iodeletedevice.md",
+        "fixture_source_path": "reference-ddi/wdm/nf-wdm-iodeletedevice.md",
+        "fixture_input": "reference-ddi/content/wdm/nf-wdm-iodeletedevice.md",
+        "source_id": "SRC-DDI-DOCS",
+        "source_path": "wdm/nf-wdm-iodeletedevice.md",
+        "source_sha256": "d8a9e548481701a046e7eaa20f7d1ab6150985b3462f9e3a9cebca4e60691402",
+        "revision": "7515063cea4c9e98db6a92986c5b4ddb0463fd16",
+        "expected_sources": {
+          "uid": "UID",
+          "title": "title",
+          "header": "req.header",
+          "dll": "req.dll",
+          "library": "req.lib",
+          "primary_name": "UID symbol selecting an explicit api_name"
+        },
+        "expected": {
+          "uid": "NF:wdm.IoDeleteDevice",
+          "title": "IoDeleteDevice function (wdm.h)",
+          "header": "wdm.h",
+          "dll": "NtosKrnl.exe",
+          "library": "NtosKrnl.lib",
+          "primary_name": "IoDeleteDevice"
+        },
+        "parameters": [
+          {
+            "name": "DeviceObject",
+            "direction": "in",
+            "optional": null,
+            "declared_type": null,
+            "position": 1,
+            "source_heading": "-param DeviceObject [in]"
+          }
+        ]
+      },
+      "declaration": {
+        "source_id": "SRC-WDK-HEADERS",
+        "source_path": "10.0.28000.0/km/wdm.h",
+        "source_sha256": "10369c2437f08eea9e197e5d858244625bc1605cae0fdcd49e5a026c63b00d4b",
+        "full_corpus": "wdk-10.0.28000.2526",
+        "source_span": {
+          "byte_start": 979780,
+          "byte_end": 979913,
+          "line_start": 35732,
+          "line_end": 35737
+        },
+        "fixture_corpus": "reference-wdk-headers",
+        "fixture_input": "reference-wdk-headers/include/IoDeleteDevice.h",
+        "fixture_path": "IoDeleteDevice.h",
+        "signature": "_IRQL_requires_max_(APC_LEVEL)\r\nNTKERNELAPI\r\nVOID\r\nIoDeleteDevice (\r\n    _In_ __drv_freesMem(Mem) PDEVICE_OBJECT DeviceObject\r\n    );",
+        "fixture_sha256": "e4d6caaa66fb46b9a85e6bb53eb270e675ec0e5ae55c82fb2164809c130ba5f8",
+        "name": "IoDeleteDevice",
+        "kind": "function"
+      }
+    }
+  ],
+  "notices": [
+    {
+      "fixture_input": "reference-sdk/LICENSE",
+      "source_id": "SRC-SDK-DOCS",
+      "source_path": "LICENSE",
+      "sha256": "7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e"
+    },
+    {
+      "fixture_input": "reference-sdk/LICENSE-CODE",
+      "source_id": "SRC-SDK-DOCS",
+      "source_path": "LICENSE-CODE",
+      "sha256": "91f7258203fd43ba6d6f7f72b644eaedee9e3430f035c053beb6f34052f045e2"
+    },
+    {
+      "fixture_input": "reference-ddi/LICENSE",
+      "source_id": "SRC-DDI-DOCS",
+      "source_path": "LICENSE",
+      "sha256": "7183ef9749eb9b75e710a81a4c812a9405cc184f087500581a973e5929ac3f5e"
+    }
+  ]
+}

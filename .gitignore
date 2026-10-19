@@ -1,0 +1,38 @@
+# Temporary trials, acquired data, recovery artifacts, and validation output.
+/tmp/
+
+# Generated databases and SQLite sidecar files.
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Python bytecode, environments, and tool caches.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+/htmlcov/
+
+# Local configuration and credentials; keep shareable examples.
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Runtime logs and editor/OS temporary files.
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
